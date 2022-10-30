@@ -18,7 +18,7 @@ body {
     height: 700px;
     padding: 7px;
     border-radius: 7px;
-    background-color: grey;
+    background-color: lightblue;
     grid-template-rows: repeat(6 , 1fr);
     grid-template-columns: repeat(4 , 1fr);
     text-align: center;
@@ -27,7 +27,6 @@ body {
 
 .btn {
     border-radius: 7px;
-    background-color: aqua;
     margin: 4px;
     display: flex;
     justify-content: center;
@@ -37,14 +36,14 @@ body {
 
 }
 
+/* calcualator color scheme */
+
 .violet {
     background-color: #9cadce;
 }
-
 .lavender {
     background-color: #d1cfe2;
 }
-
 .greenyblue {
     background-color: #7ec4cf;
 }
