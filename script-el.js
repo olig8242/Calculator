@@ -28,9 +28,10 @@ calc6.addEventListener("click", () => {
 })
 
 calc7.addEventListener("click", () => {
-    if (plus == true && currentNumber !== "") {
+    if ((plus == true || minus == true) && currentNumber !== "") {
         calcScreen.textContent = "7"
         plus = false;
+        minus = false;
     }
     else {
         calcScreen.textContent += "9" 
@@ -38,18 +39,20 @@ calc7.addEventListener("click", () => {
 })
 
 calc8.addEventListener("click", () => {
-    if (plus == true && currentNumber !== "") {
+    if ((plus == true || minus == true) && currentNumber !== "") {
         calcScreen.textContent = "8"
         plus = false;
+        minus = false;
     }
     else {
         calcScreen.textContent += "8" 
     }
 })
 calc9.addEventListener("click", () => {
-    if (plus == true && currentNumber !== "") {
+    if ((plus == true || minus == true) && currentNumber !== "") {
         calcScreen.textContent = "9"
         plus = false;
+        minus = false;
     }
     else {
         calcScreen.textContent += "9" 
@@ -70,13 +73,19 @@ calcSubtract.addEventListener("click", () => {
     target = "subtract";
     plus = false;
     minus = true;
-    
+    if (calcScreen.textContent !== "") {
+        currentNumber = calcScreen.textContent;
+        console.log(currentNumber);
+    }
 })
 
 
 calcEquals.addEventListener("click", () => {
     if (target == "plus") {
     equalsNumber = calcScreen.textContent = parseInt(currentNumber) + parseInt(calcScreen.textContent);
+    } else if (target == "subtract") {
+        equalsNumber = calcScreen.textContent = parseInt(currentNumber) - parseInt(calcScreen.textContent);
+
     }
 })
 
