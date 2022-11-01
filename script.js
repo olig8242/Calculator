@@ -1,6 +1,5 @@
 //plan
 
-
 //variables
 const calcScreen = document.querySelector(".calc-screen");
 
@@ -22,4 +21,4 @@ const calcEquals = document.querySelector(".calc-equals");
 const calcReset = document.querySelector(".calc-reset");
 const calcMultiply = document.querySelector(".calc-multiply");
 const calcDivide = document.querySelector(".calc-divide");
-
+const calcDot = document.querySelector(".calc-dot");

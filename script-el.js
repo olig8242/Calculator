@@ -8,6 +8,7 @@ let minus = false;
 let divide = false;
 let multiply = false;
 let equals = false;
+let dot = false;
 //functions
 
 function calculation (para) {
@@ -57,6 +58,14 @@ calc8.addEventListener("click", () => {
 
 calc9.addEventListener("click", () => {
     calculation("9")
+});
+
+calcDot.addEventListener("click", () => {
+    if (calcScreen.textContent.includes(".")) {
+        return
+    }
+    calculation(".")
+    
 });
 
 calcReset.addEventListener("click", () => {
@@ -149,10 +158,3 @@ calcEquals.addEventListener("click", () => {
 
     } 
 })
-
-
-//plus 
-//take current number, 
-//change plus to true
-//next number added needs to start to overwrite current number
-
