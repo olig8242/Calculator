@@ -7,7 +7,7 @@ let plus = false;
 let minus = false;
 let divide = false;
 let multiply = false;
-
+let equals = false;
 //functions
 
 function calculation (para) {
@@ -23,111 +23,40 @@ function calculation (para) {
     }
 }
 
-
 calc1.addEventListener("click", () => {
     calculation("1")
 });
 
 calc2.addEventListener("click", () => {
-    if ((plus == true || minus == true || divide == true || multiply == true) && currentNumber !== "") {
-        calcScreen.textContent = "2"
-        plus = false;
-        minus = false;
-        divide = false;
-        multiply = false;
-    }
-    else {
-        calcScreen.textContent += "2" 
-    }})
+    calculation("2")
+});
 
 calc3.addEventListener("click", () => {
-    if ((plus == true || minus == true || divide == true || multiply == true) && currentNumber !== "") {
-        calcScreen.textContent = "3"
-        plus = false;
-        minus = false;
-        divide = false;
-        multiply = false;
-    }
-    else {
-        calcScreen.textContent += "3" 
-    }
-})
+    calculation("3")
+});
 
 calc4.addEventListener("click", () => {
-    if ((plus == true || minus == true || divide == true || multiply == true) && currentNumber !== "") {
-        calcScreen.textContent = "4"
-        plus = false;
-        minus = false;
-        divide = false;
-        multiply = false;
-    }
-    else {
-        calcScreen.textContent += "4" 
-    }
-})
+    calculation("4")
+});
 
 calc5.addEventListener("click", () => {
-    if ((plus == true || minus == true || divide == true || multiply == true) && currentNumber !== "") {
-        calcScreen.textContent = "5"
-        plus = false;
-        minus = false;
-        divide = false;
-        multiply = false;
-    }
-    else {
-        calcScreen.textContent += "5" 
-    }
-})
+    calculation("5")
+});
 
 calc6.addEventListener("click", () => {
-    if ((plus == true || minus == true || divide == true || multiply == true) && currentNumber !== "") {
-        calcScreen.textContent = "6"
-        plus = false;
-        minus = false;
-        divide = false;
-        multiply = false;
-    }
-    else {
-        calcScreen.textContent += "6" 
-    }
-})
+    calculation("6")
+});
 
 calc7.addEventListener("click", () => {
-    if ((plus == true || minus == true || divide == true || multiply == true) && currentNumber !== "") {
-        calcScreen.textContent = "7"
-        plus = false;
-        minus = false;
-        divide = false;
-        multiply = false;
-    }
-    else {
-        calcScreen.textContent += "7" 
-    }
-})
+    calculation("7")
+});
 
 calc8.addEventListener("click", () => {
-    if ((plus == true || minus == true || divide == true || multiply == true) && currentNumber !== "") {
-        calcScreen.textContent = "8"
-        plus = false;
-        minus = false;
-        divide = false;
-        multiply = false;
-    }
-    else {
-        calcScreen.textContent += "8" 
-    }
-})
+    calculation("8")
+});
+
 calc9.addEventListener("click", () => {
-    if ((plus == true || minus == true || divide == true || multiply == true) && currentNumber !== "") {
-        calcScreen.textContent = "9"
-        plus = false;
-        minus = false;
-        divide = false;
-        multiply = false;
-    }
-    else {
-        calcScreen.textContent += "9" 
-    }
+    calculation("9")
 });
 
 calcReset.addEventListener("click", () => {
@@ -146,6 +75,8 @@ calcPlus.addEventListener("click", () => {
     minus = false;
     divide = false;
     multiply = false;
+    equals = true;
+
     if (calcScreen.textContent !== "") {
         currentNumber = calcScreen.textContent;
         console.log(currentNumber);
@@ -159,6 +90,7 @@ calcSubtract.addEventListener("click", () => {
     minus = true;
     divide = false;
     multiply = false;
+    equals = true;
 
     if (calcScreen.textContent !== "") {
         currentNumber = calcScreen.textContent;
@@ -173,6 +105,7 @@ calcMultiply.addEventListener("click", () => {
     minus = false;
     divide = false;
     multiply = true;
+    equals = true;
 
     if (calcScreen.textContent !== "") {
         currentNumber = calcScreen.textContent;
@@ -184,8 +117,9 @@ calcDivide.addEventListener("click", () => {
     target = "divide";
     plus = false;
     minus = false;
-    divide = false;
-    multiply = true;
+    divide = true;
+    multiply = false;
+    equals = true;
 
     if (calcScreen.textContent !== "") {
         currentNumber = calcScreen.textContent;
@@ -193,17 +127,25 @@ calcDivide.addEventListener("click", () => {
     }
 })
 
+
 calcEquals.addEventListener("click", () => {
-    if (target == "plus") {
+
+
+    if (target == "plus" && equals == true) {
     equalsNumber = calcScreen.textContent = parseInt(currentNumber) + parseInt(calcScreen.textContent);
-    } else if (target == "subtract") {
+    equals = false;
+
+    } else if (target == "subtract" && equals == true) {
     equalsNumber = calcScreen.textContent = parseInt(currentNumber) - parseInt(calcScreen.textContent);
+    equals = false;
 
-    } else if (target == "multiply") {
+    } else if (target == "multiply" && equals == true) {
     equalsNumber = calcScreen.textContent = parseInt(currentNumber) * parseInt(calcScreen.textContent);
+    equals = false;
 
-    } else if (target == "divide") {
+    } else if (target == "divide" && equals == true) {
     equalsNumber = calcScreen.textContent = parseInt(currentNumber) / parseInt(calcScreen.textContent);
+    equals = false;
 
     } 
 })
