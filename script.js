@@ -1,12 +1,5 @@
 //plan
 
-//create calculator design
-//have buttons work so screen changes
-//ensure buttons can interact with each other
-let plus = false;
-let minus = false;
-let divide = false;
-let multiply = false;
 
 //variables
 const calcScreen = document.querySelector(".calc-screen");
@@ -26,3 +19,7 @@ const calc9 = document.querySelector(".calc-9");
 const calcSubtract = document.querySelector(".calc-subtract");
 const calcPlus = document.querySelector(".calc-plus");
 const calcEquals = document.querySelector(".calc-equals");
+const calcReset = document.querySelector(".calc-reset");
+const calcMultiply = document.querySelector(".calc-multiply");
+const calcDivide = document.querySelector(".calc-divide");
+
