@@ -13,7 +13,52 @@ let equals = false;
 let dot = false;
 let percentage = false;
 
+document.addEventListener("keydown", (event) => {
+    console.log(event)
+    switch (event.key) {
+        case "1":
+            calculation("1");
+            break;
+        case "2":
+            calculation("2");
+            break;
+        case "3":
+            calculation("3");
+            break;
+        case "4":
+            calculation("4");
+            break;
+        case "5":
+            calculation("5");
+            break;
+        case "6":
+            calculation("6");
+            break;
+        case "7":
+            calculation("7");
+            break;
+        case "8":
+            calculation("8");
+            break;
+        case "9":
+            calculation("9");
+            break;
+        case "0":
+            calculation("0");
+            break;
+        case "Escape":
+            reset();
+            break;
+        case "NumpadDivide":
 
+            break;
+        case "0":
+            calculation("0");
+            break;
+
+        
+    }
+})
 
 calc1.addEventListener("click", () => {
     calculation("1");
@@ -73,31 +118,12 @@ calcPlusMinus.addEventListener("click", () => {
 });
 
 calcReset.addEventListener("click", () => {
-    plus = false;
-    minus = false;
-    percentage = false;
-    divide = false;
-    multiply = false;
-    calcScreen.textContent = "";
-    currentNumber = 0;
-    screenSign.textContent = ""
+    reset();
 })
 
 
 calcPlus.addEventListener("click", () => {
-    target = "plus"
-    plus = true;
-    minus = false;
-    percentage = false;
-    divide = false;
-    multiply = false;
-    equals = true;
-
-    if (calcScreen.textContent !== "") {
-        currentNumber = calcScreen.textContent;
-        screenSign.textContent = "+"
-        console.log(currentNumber);
-    }
+    screenPlus();
 }) 
 
 calcSubtract.addEventListener("click", () => {
@@ -146,7 +172,6 @@ calcDivide.addEventListener("click", () => {
     if (calcScreen.textContent !== "") {
         screenSign.textContent = "/"
         currentNumber = calcScreen.textContent;
-        console.log(currentNumber);
     }
 })
 
@@ -162,8 +187,6 @@ calcPercentage.addEventListener("click", () => {
     if (calcScreen.textContent !== "") {
         currentNumber = calcScreen.textContent;
         screenSign.textContent = "%";
-        console.log(currentNumber);
-        console.log(percentage)
     }
 
 
