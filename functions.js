@@ -1,6 +1,7 @@
 function calculation (para) {
     if ((plus == true || minus == true || divide == true || multiply == true || percentage == true) && currentNumber !== "") {
-        calcScreen.textContent = para
+        calcScreen.textContent = para;
+        screenSign.textContent = "";
         plus = false;
         minus = false;
         divide = false;
@@ -11,3 +12,4 @@ function calculation (para) {
         calcScreen.textContent += para
     }
 }
+

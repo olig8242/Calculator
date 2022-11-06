@@ -15,8 +15,8 @@ const calc7 = document.querySelector(".calc-7");
 const calc8 = document.querySelector(".calc-8");
 const calc9 = document.querySelector(".calc-9");
 
-const calc0 = document.querySelector(".calc-0")
 
+const calc0 = document.querySelector(".calc-0")
 const calcSubtract = document.querySelector(".calc-subtract");
 const calcPlus = document.querySelector(".calc-plus");
 const calcEquals = document.querySelector(".calc-equals");
@@ -26,4 +26,11 @@ const calcDivide = document.querySelector(".calc-divide");
 const calcDot = document.querySelector(".calc-dot");
 const calcPlusMinus = document.querySelector(".calc-plus-minus");
 const calcPercentage = document.querySelector(".calc-percentage");
+const screenSign = document.querySelector(".screen-sign")
 
+buttons = document.querySelectorAll(".btn")
+
+
+buttons.forEach(element => {
+    element.classList.add("btn-click")
+});

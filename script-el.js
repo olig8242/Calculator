@@ -1,4 +1,6 @@
 
+//variables
+
 let currentNumber;
 let equalsNumber;
 let target;
@@ -10,9 +12,7 @@ let multiply = false;
 let equals = false;
 let dot = false;
 let percentage = false;
-//functions
 
-console.log(percentage)
 
 
 calc1.addEventListener("click", () => {
@@ -80,6 +80,7 @@ calcReset.addEventListener("click", () => {
     multiply = false;
     calcScreen.textContent = "";
     currentNumber = 0;
+    screenSign.textContent = ""
 })
 
 
@@ -94,6 +95,7 @@ calcPlus.addEventListener("click", () => {
 
     if (calcScreen.textContent !== "") {
         currentNumber = calcScreen.textContent;
+        screenSign.textContent = "+"
         console.log(currentNumber);
     }
 }) 
@@ -110,6 +112,7 @@ calcSubtract.addEventListener("click", () => {
 
     if (calcScreen.textContent !== "") {
         currentNumber = calcScreen.textContent;
+        screenSign.textContent = "-"
         console.log(currentNumber);
     }
 })
@@ -126,6 +129,7 @@ calcMultiply.addEventListener("click", () => {
 
     if (calcScreen.textContent !== "") {
         currentNumber = calcScreen.textContent;
+        screenSign.textContent = "*"
         console.log(currentNumber);
     }
 })
@@ -140,6 +144,7 @@ calcDivide.addEventListener("click", () => {
     equals = true;
 
     if (calcScreen.textContent !== "") {
+        screenSign.textContent = "/"
         currentNumber = calcScreen.textContent;
         console.log(currentNumber);
     }
@@ -156,6 +161,7 @@ calcPercentage.addEventListener("click", () => {
 
     if (calcScreen.textContent !== "") {
         currentNumber = calcScreen.textContent;
+        screenSign.textContent = "%";
         console.log(currentNumber);
         console.log(percentage)
     }
