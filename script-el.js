@@ -14,7 +14,6 @@ let dot = false;
 let percentage = false;
 
 document.addEventListener("keydown", (event) => {
-    console.log(event)
     switch (event.key) {
         case "1":
             calculation("1");
@@ -139,7 +138,6 @@ calcSubtract.addEventListener("click", () => {
     if (calcScreen.textContent !== "") {
         currentNumber = calcScreen.textContent;
         screenSign.textContent = "-"
-        console.log(currentNumber);
     }
 })
 
@@ -156,7 +154,6 @@ calcMultiply.addEventListener("click", () => {
     if (calcScreen.textContent !== "") {
         currentNumber = calcScreen.textContent;
         screenSign.textContent = "*"
-        console.log(currentNumber);
     }
 })
 

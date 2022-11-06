@@ -12,9 +12,7 @@ body {
     justify-content: center;
     height: 100vh;
     background:
-        linear-gradient(red, transparent),
-        linear-gradient(to top left, lime, transparent),
-        linear-gradient(to top right, purple, transparent);
+
     background-blend-mode: screen;
     background-repeat: no-repeat;
     user-select: none;

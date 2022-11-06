@@ -36,6 +36,5 @@ function screenPlus () {
     if (calcScreen.textContent !== "") {
         currentNumber = calcScreen.textContent;
         screenSign.textContent = "+"
-        console.log(currentNumber);
     }
 }
